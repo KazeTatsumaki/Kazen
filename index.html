@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.108.0">
+    <title>Product example · Bootstrap v5.3</title>
+<link href="bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      .anhwaifu{
+        border-radius: 21px 21px 0 0  ;
+
+      }
+      
+      .chutrang{
+        color: white;
+      }
+      .chuden{
+        color: black;
+      }
+      .iconhololive{
+        
+        left: 10%;
+      }
+      body{
+        background-color: rgb(172, 172, 172);
+      }
+      .chuxanhduong{
+        color:aqua;
+        font-size: 50px;
+      }
+      .anhnhom1{
+        position: absolute;
+        left: -16%;
+        top: 14%;
+      }
+      .anhnhom2{
+        position: absolute;
+        right: -16%;
+        bottom: 12%;
+        
+      }
+      .fauna{
+        margin-left: 25px;
+      }
+      .KHUNGMUITEN{
+
+        width: 60PX;
+        height: 60PX;
+        margin-inline-end: auto;
+        margin: auto;
+        margin-bottom: auto;
+      }
+      .muiten{
+        position: absolute;
+        right: 20px;
+        font-size: 40px;
+        width: 90px;
+        color: black;
+        margin-bottom: 10px;
+      }
+      .lamy{
+        margin-left: 30px;
+      }
+      @keyframes my{
+        0%{color: rgb(0, 255, 255);}
+        25%{color:rgb(35, 245, 245);}
+        50%{color: rgb(70, 235, 235);}
+        75%{color:rgb(40, 245, 245) }
+        100%{color: rgb(0, 255, 255)}
+    }
+    .text-animation{
+       
+       font-size: 60px;
+       font-weight: bold;
+       -webkit-animation: my 900ms infinite;
+       -moz-animation: my 900ms infinite;
+       -o-animation: my 900ms infinite;
+       animation: my 900ms infinite;
+    }
+    .linkface{
+      right: 110px;
+      position: absolute;
+      bottom: auto  ;
+      margin-right: 20px;
+     
+    }
+    .linkzalo{
+      right: 210px;
+      position: absolute;
+      bottom: auto  ;
+      margin-right: 20px;
+    }
+    body{
+    margin:0;
+    padding:0;
+    background-color:light-blue ;
+   }
+   #container{
+    width:175px;
+    height:175px;
+    margin:auto;
+    perspective:440px;
+    margin-top:10px;
+    margin-bottom: 80px;
+   }
+   .cover{
+    width: 200px;
+    height:200px;
+    animation:flip-animate 20s linear infinite; /*   Làm xoay các ảnh */
+    transform-style:preserve-3d; /*   các thành phần bên trong class cover sẽ hiển thị dưới dạng 3D */
+   }
+   #container .cover div{
+    width:200px;
+    height:200px;
+    position:absolute;
+   }
+   #container .cover div img{
+    width:200px;
+    height:200px;
+   }
+   #container .cover .front{
+    transform:rotate(180deg) translateZ(100px);/*   định vị lại ảnh trong class front dọc theo trục z trong không gian 3D */
+    
+   }
+   #container .cover .back{
+    transform:rotateY(180deg) translateZ(100px);
+   /*   xoay ảnh theo trục y là 180 độ và dịch chuyển đến trục Z */
+   }
+   #container .cover .left{
+    transform:rotateY(-90deg) translateX(-100px);
+     /*   xoay ảnh theo trục y là -90 độ và dịch chuyển đến trục X */
+    transform-origin:left;/*   Cho phép dịch chuyển phần tử sang trái */
+     
+   }
+   #container .cover .right{
+    transform:rotateY(90deg) translateX(100px);/*   xoay ảnh theo trục Y là 90 độ và dịch chuyển đến trục X */
+    transform-origin:right;/*   Cho phép dịch chuyển phần tử sang phải */
+   }
+   #container .cover .top{
+    transform:rotateX(-90deg) translateY(-100px);/*   xoay ảnh theo trục X là -90 độ và dịch chuyển đến trục Y */
+    transform-origin:top;/*   Cho phép dịch chuyển phần tử lên trên */
+   }
+   #container .cover .bottom{
+    transform:rotateX(90deg) translateY(100px);/*   xoay ảnh theo trục X là 90 độ và dịch chuyển đến trục Y */
+    transform-origin:bottom;/*   Cho phép dịch chuyển phần tử xuống dưới */
+   }
+   @keyframes flip-animate{
+    0%{transform:rotatex(180deg) rotateY(-90deg);}
+    25%{transform: rotateX(-180deg) rotateY(-180deg);}
+    50%{transform: rotateX(180deg) rotateY(180deg);}
+    75%{transform: rotateX(-180deg) rotateY(180deg);}
+    100%{transform:rotateX(180deg) rotateY(-90deg);}
+   }/* điều khiển các hiệu ứng của thuộc tính animation */
+   html,body{cursor:url("https://i.pinimg.com/originals/85/db/cf/85dbcf9077bf0e778365259a8ac9dfca.gif"), auto;}
+	a:hover{cursor:url("https://i.pinimg.com/originals/85/db/cf/85dbcf9077bf0e778365259a8ac9dfca.gif"), auto;}
+.vidteam{
+  margin-left: 25%;
+}
+.cover:hover{
+  animation-play-state: paused;
+}
+
+.ô1{width: 25%;
+  height: 530px;
+  position: absolute;
+  border: unset;
+  color: unset;
+  background-color: unset;
+  background-image: url("poster.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 40px;
+}
+.ô2{width: 25%;
+  height: 530px;
+  position: absolute;
+  border: unset;
+  color: unset;
+  background-color: unset;
+  background-image: url("poster.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  right:-2%
+}
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="product.css" rel="stylesheet">
+  </head>
+  <body>
+   
+<header class="site-header sticky-top py-1">
+  <nav class="container d-flex flex-column flex-md-row justify-content-between">
+    <a class="py-1" href="https://hololive.hololivepro.com/en/" aria-label="Product">
+     <img src="iconhololive.jpg" width="60px">
+    </a>
+    
+    <a style="cursor: pointer;" class="py-2 d-none d-md-inline-block m-md-3" href="index.html">Home</a>
+    <a style="cursor: pointer;" class="py-2 d-none d-md-inline-block m-md-3" href="totruynahiu.jpg">Truy nã</a>
+    <a style="cursor: pointer;" class="py-2 d-none d-md-inline-block m-md-3" href="https://hololive.hololivepro.com/talents">Character</a>
+    <a style="cursor: pointer;" class="py-2 d-none d-md-inline-block m-md-3" href="https://hololive.hololivepro.com/events">Events</a>
+    <a style="cursor: pointer;" class="py-2 d-none d-md-inline-block m-md-3" href="https://hololive.hololivepro.com/music">Music</a>
+    <a style="cursor: pointer;" class="py-2 d-none d-md-inline-block m-md-3" href="https://hololive.hololivepro.com/videos">Videos</a>
+    <a style="cursor: pointer;" class="py-2 d-none d-md-inline-block m-md-3" href="https://hololive.hololivepro.com/special">Special</a>
+  </nav>
+</header>
+  
+
+<main>
+
+  <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light ">
+    <div class="col-md-5 p-lg-5 mx-auto my-5">
+      <img src="anhnhom.png" class="anhnhom2">
+      <h1 class="display-4 fw-normal"><span style="color: aqua; size: 80px;" class="text-animation">Hololive</span></h1>
+      <p class="lead fw-normal"></p>
+      <img src="anhnhom.png" class="anhnhom1">
+      
+    </div>
+    
+    <div id="container">
+      <div class="cover">
+       <div class="front" >
+         <a href="https://virtualyoutuber.fandom.com/wiki/Nakiri_Ayame" class="xoayanh"><img src="ayame3.jpg"><a>    
+        </div>
+       <div class="back" >
+         <a href="https://virtualyoutuber.fandom.com/wiki/Shishiro_Botan"><img src="botan5.jpg"></a>   
+        </div>
+         <div class="top" >
+          <a href="https://virtualyoutuber.fandom.com/wiki/Shirakami_Fubuki" ><img src="fubuki.jpg"></a>      
+        </div>
+       <div class="bottom" >
+        <a href="https://virtualyoutuber.fandom.com/wiki/Watson_Amelia"><img src="ameliavuong.jpg"></a>
+      </div>
+       <div class="left" >
+         <a href="https://virtualyoutuber.fandom.com/wiki/Gawr_Gura"><img src="gủa3.jpg"></a>
+        </div>
+       <div class="right">
+         <a href="https://virtualyoutuber.fandom.com/wiki/Houshou_Marine"><img src="marine2.jpg"></a>    
+        </div>
+      </div>
+     </div> 
+  </div>
+  <button class="ô1">
+</button>
+  <button class="ô2">
+  </button>
+  <video src="【Digest Movie】hololive 3rd fes Link Your Wish English ver【つながるホロライブ】.mp4" autoplay muted loop controls class="vidteam" width="50%" >
+    Your browser does not support the <video> element.  
+</video>
+  
+  </video>
+
+
+  <div class="d-md-flex height-100px flex-md-equal w-100 my-md-3 ps-md-3">
+    <div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <a href="https://www.youtube.com/channel/UCyl1z3jo3XHR1riLFKG5UAg"><img src="iconyoutube.png" width="80px"></a>
+      <a href="https://twitter.com/watsonameliaEN"><img src="icontwitter.jfif" width="60px"></a>
+      <div class="my-3 py-3">
+        <h2 class="display-5"><a href="https://virtualyoutuber.fandom.com/wiki/Watson_Amelia" class="chutrang">watson Amelia</a></h2>
+        <p class="lead">Original Name: ワトソン・アメリア</p>
+      </div>
+      <div><a href="https://virtualyoutuber.fandom.com/wiki/Watson_Amelia"><img src="amelia2.png" class="anhwaifu" width="100%"></a></div>
+    </div>
+    <div class="text-bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <a href="https://www.youtube.com/channel/UCyl1z3jo3XHR1riLFKG5UAg"><img src="iconyoutube.png" width="80px"></a>
+      <a href=""><img src="icontwitter.jfif" width="60px"></a>
+      <div class="my-3 py-3">
+        <h2 class="display-5"><a href="https://virtualyoutuber.fandom.com/wiki/Gawr_Gura" class="chuden">Gawr Gura</a></h2>
+        <p class="lead">Original Name: がうる・ぐら</p>
+      </div>
+      <div ><a href="https://virtualyoutuber.fandom.com/wiki/Gawr_Gura"><img src="gủa2.jfif" class="anhwaifu" width="100%"></a></div>
+    </div>
+    <div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <a href="https://www.youtube.com/channel/UCyl1z3jo3XHR1riLFKG5UAg"><img src="iconyoutube.png" width="80px"></a>
+      <a href=""><img src="icontwitter.jfif" width="60px"></a>
+      <div class="my-3 p-3">
+        <h2 class="display-5"><a href="https://virtualyoutuber.fandom.com/wiki/Nakiri_Ayame" class="chutrang">Nakiri Ayame</a></h2>
+        <p class="lead">Original Name: 百鬼あやめ</p>
+      </div>
+      <div ><a href="https://virtualyoutuber.fandom.com/wiki/Nakiri_Ayame"><img src="ayamedoc1.jpg" class="anhwaifu" width="100%"></a></div>
+    </div>
+  </div>
+
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <a href="https://www.youtube.com/channel/UCyl1z3jo3XHR1riLFKG5UAg"><img src="iconyoutube.png" width="80px"></a>
+      <a href=""><img src="icontwitter.jfif" width="60px"></a>
+      <div class="my-3 p-3">
+        <h2 class="display-5"><a href="https://virtualyoutuber.fandom.com/wiki/Amatsuka_Uto" class="chuden">Amastuka Uto</a></h2>
+        <p class="lead">Original Name: 天使うと</p>
+      </div>
+      <div><a href="https://virtualyoutuber.fandom.com/wiki/Amatsuka_Uto"><img src="uto4.jpg" width="100%" class="anhwaifu"></a></div>
+    </div>
+    <div class="text-bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <a href="https://www.youtube.com/channel/UCyl1z3jo3XHR1riLFKG5UAg"><img src="iconyoutube.png" width="80px"></a>
+            <a href=""><img src="icontwitter.jfif" width="60px"></a>
+      <div class="my-3 py-3">
+        <h2 class="display-5"><a href="https://virtualyoutuber.fandom.com/wiki/Houshou_Marine" class="chuden">Marine Houshou</a></h2>
+        <p class="lead">Original Name: 宝鐘マリン</p>
+      </div>
+      <div ><a href="https://virtualyoutuber.fandom.com/wiki/Houshou_Marine"><img src="marine1(PTS).jpg" width="100%" class="anhwaifu"></a></div>
+    </div>
+  </div>
+
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <a href="https://www.youtube.com/channel/UCyl1z3jo3XHR1riLFKG5UAg"><img src="iconyoutube.png" width="80px"></a>
+      <a href=""><img src="icontwitter.jfif" width="60px"></a>
+      <div class="my-3 p-3">
+        <h2 class="display-5"><a href="https://virtualyoutuber.fandom.com/wiki/Shishiro_Botan" class="chuden">Shishiro Botan</a></h2>
+        <p class="lead">Original Name: 獅白ぼたん</p>
+      </div>
+      <div ><a href="https://virtualyoutuber.fandom.com/wiki/Shishiro_Botan"><img src="botan4.jpg" width="100%" class="anhwaifu"></a></div>
+    </div>
+    <div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <a href="https://www.youtube.com/channel/UCyl1z3jo3XHR1riLFKG5UAg"><img src="iconyoutube.png" width="80px"></a>
+      <a href=""><img src="icontwitter.jfif" width="60px"></a>
+      <div class="my-3 p-3">
+        <h2 class="display-5"><a href="https://virtualyoutuber.fandom.com/wiki/Ceres_Fauna" class="chutrang">Ceres Fauna</a></h2>
+        <p class="lead">Original Name: セレス・ファウナ</p>
+      </div>
+      <div class="fauna" style="width: 88%;"><a href="https://virtualyoutuber.fandom.com/wiki/Ceres_Fauna"><img src="fauna3.jpg" width="100%" class="anhwaifu"></a></div>
+    </div>
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <a href="https://www.youtube.com/channel/UCyl1z3jo3XHR1riLFKG5UAg"><img src="iconyoutube.png" width="80px"></a>
+      <a href=""><img src="icontwitter.jfif" width="60px"></a>
+      <div class="my-3 py-3">
+        <h2 class="display-5"><a href="https://virtualyoutuber.fandom.com/wiki/Nekomata_Okayu" class="chuden">Okayo Nekomata</a></h2>
+        <p class="lead">Original Name: 猫又おかゆ</p>
+      </div>
+      <div ><a href="https://virtualyoutuber.fandom.com/wiki/Nekomata_Okayu"><img src="okayu.jpg" width="100%" class="anhwaifu"></a></div>
+    </div>
+  </div>
+
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+    <div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <a href="https://www.youtube.com/channel/UCyl1z3jo3XHR1riLFKG5UAg"><img src="iconyoutube.png" width="80px"></a>
+      <a href=""><img src="icontwitter.jfif" width="60px"></a>
+      <div class="my-3 p-3">
+        <h2 class="display-5"><a href="https://virtualyoutuber.fandom.com/wiki/Yukihana_Lamy" class="chutrang">Yukihana Lamy</a></h2>
+        <p class="lead">Original Name: 雪花ラミィ</p>
+      </div>
+      <div class="lamy" style="width: 93%;"><a href="https://virtualyoutuber.fandom.com/wiki/Yukihana_Lamy"><img src="lamy.png" width="100%" class="anhwaifu"></a></div>
+    </div>
+    <div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <a href="https://www.youtube.com/channel/UCyl1z3jo3XHR1riLFKG5UAg"><img src="iconyoutube.png" width="80px"></a>
+      <a href=""><img src="icontwitter.jfif" width="60px"></a>
+      <div class="my-3 py-3">
+        <h2 class="display-5"><a href="https://virtualyoutuber.fandom.com/wiki/Shirakami_Fubuki" class="chutrang">Shiragami Fubuki</h2>
+        <p class="lead">Original Name: 白上フブキ</p>
+      </div>
+      <div><a href="https://virtualyoutuber.fandom.com/wiki/Shirakami_Fubuki"><img src="fubuki1.jpg " width="100%" class="anhwaifu"></a></div>
+    </div>
+  </div>
+</main>
+
+<footer class="container-fluid py-5">
+  <div class="row">
+    <div class="col-sm-12">
+      <a href="https://hololive.hololivepro.com/"><img src="iconhololive.jpg" class="iconhololive ms-3"></a>
+      <a class="chuxanhduong m-md-3" href="https://hololive.hololivepro.com/">HOLOLIVE</a>   
+    </div>  
+    <div class="col-6 col-md ">
+      <h5></h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="link-secondary" href="#"></a></li>
+        <li><a class="linkzalo" href="https://zalo.me/0762897177"><img src="iconzalo.webp" width="90px"></a></li>
+        <li><a class="linkface" href="https://www.facebook.com/profile.php?id=100021563914723"><img src="iuconfacebook.png" width="90px"></a></li>
+        <li><a class="muiten" href="#" style="color: black;"><button class="KHUNGMUITEN">↑</button></a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+ 
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+      
+  </body>
+</html>
